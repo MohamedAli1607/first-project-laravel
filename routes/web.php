@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/*passage de parametre à travers le controler TestController
+*/Route::get('/contact/{name}/{id}','TestController@Testdata');
+
+/*Passage de deux parmaetres name et id
+*//*Route::get('/contact/{name}/{id}',function($name,$id){
+
+	echo "bonjour".$name." "  .$id;
+ })->where('name=>[a-z A-Z]+','id=>[1-9]');*/

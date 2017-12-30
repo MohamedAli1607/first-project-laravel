@@ -80,11 +80,10 @@
             <div class="content">
                 <div class="title m-b-md">
                     Bonjour je m'appelle med Ali
-                
+
                 </div>
 
                
             </div>
         </div>
     </body>
-</html>
