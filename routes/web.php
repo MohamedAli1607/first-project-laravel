@@ -14,19 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+Route::get('/formation','FormationController@index');
 /*passage de parametre à travers le controler TestController
-*/Route::get('/contact/{name}/{id}','TestController@Testdata');
+*///Route::get('/contact/{name}/{id}','TestController@Testdata');
 
 /*Passage de deux parmaetres name et id
 *//*Route::get('/contact/{name}/{id}',function($name,$id){
 
 	echo "bonjour".$name." "  .$id;
  })->where('name=>[a-z A-Z]+','id=>[1-9]');*/
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
