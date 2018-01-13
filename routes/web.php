@@ -18,6 +18,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 Route::get('/formation','FormationController@index');
+Route::get('/formation/creation','FormationController@create');
+Route::post('/formation','FormationController@store');
+Route::get('/formation/{id}/modifier','FormationController@edit');
+Route::put('/formation/{id}','FormationController@update');
+Route::delete('/formation/{id}','FormationController@destroy');
+Route::get('/formation/{id}/show','FormationController@show');
+
 /*passage de parametre à travers le controler TestController
 *///Route::get('/contact/{name}/{id}','TestController@Testdata');
 
